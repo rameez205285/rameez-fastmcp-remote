@@ -35,7 +35,7 @@ def init_db():  # Keep as sync for initialization
         print(f"Database initialization error: {e}")
         raise
 
-# Initialize database synchronously at module load
+# Initialize database synchronously at module load - this ensures the database is ready before any async operations
 init_db()
 
 @mcp.tool()
@@ -113,6 +113,7 @@ def categories():
                 "Travel",
                 "Education",
                 "Business",
+                "investments",
                 "Other"
             ]
         }
